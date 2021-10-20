@@ -11,6 +11,10 @@ on:
 env:
   DRY_RUN: ${{ github.ref != 'refs/heads/main' }}
   OWNER: ${{ github.repository_owner }}
+  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
