@@ -1,7 +1,7 @@
 # renovate: datasource=github-releases depName=containerbase/ruby-prebuild versioning=ruby
 ARG RUBY_VERSION=2.7.7
 
-FROM ghcr.io/containerbase/buildpack:6.0.3@sha256:4e3e3ad2d83863d7301fffd90ed160a3c47553ba87d5f3fdbefcdd647152fe00
+FROM ghcr.io/containerbase/buildpack:6.0.5@sha256:dc41c522d25acce3b4d1cbe26483833ba53bc31de8ab14e8439ea8916e3499c1
 
 ARG RUBY_VERSION
 RUN install-tool ruby
